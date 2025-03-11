@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>査定チェック</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>最前管理適正チェック</h1>
+    <div class="container">
+        <form id="assessmentForm">
+            <div class="question">
+                <dt class="color-main">Q1. 現場に通う頻度</dt>
+                <label><input type="radio" name="q1" value="基本的に全通:0"> 基本的に全通</label>
+                <label><input type="radio" name="q1" value="居住範囲であればフェスや対バンも行く:10"> 居住範囲であればフェスや対バンも行く</label>
+                <label><input type="radio" name="q1" value="ワンマンのみ行く:20"> ワンマンのみ行く</label>
+                <label><input type="radio" name="q1" value="予定が合えば行く:100"> 予定が合えば行く</label>
+            </div>
+
+            <div class="question">
+                <dt class="color-main">Q2. お目当てが六本木アイドルフェスに出演</dt>
+                <label><input type="radio" name="q2" value="追加もあるし30枠/人でいいのでは:0"> 追加もあるし30枠/人でいいのでは</label>
+                <label><input type="radio" name="q2" value="15枠/人くらいだと助かる:10"> 15枠/人くらいだと助かる</label>
+                <label><input type="radio" name="q2" value="7枠/人くらいでなんとか…これが続くとキツイ…:20"> 7枠/人くらいでなんとか…これが続くとキツイ…</label>
+                <label><input type="radio" name="q2" value="自枠だけ買います:100"> 自枠だけ買います</label>
+            </div>
+            
+            <div class="question">
+                <dt class="color-main">Q3. 並び順で入場の現場です</dt>
+                <label><input type="radio" name="q3" value="前日のお昼くらいから:0"> 前日のお昼くらいから</label>
+                <label><input type="radio" name="q3" value="前日終電:5"> 前日終電</label>
+                <label><input type="radio" name="q3" value="始発:10"> 始発</label>
+                <label><input type="radio" name="q3" value="朝8時:100"> 朝8時</label>
+            </div>
+            
+            <div class="question">
+                <dt class="color-main">Q4. できること</dt>
+                <label><input type="radio" name="q4" value="おまいつとも連携があり数十人単位で番号を聞けたり借りたりできる:0"> おまいつとも連携があり数十人単位で番号を聞けたり借りたりできる</label>
+                <label><input type="radio" name="q4" value="交渉で100万出してもいいし、入りたいライブの枠入れは100万単位でできる:3"> 交渉で100万出してもいいし、入りたいライブの枠入れは100万単位でできる</label>
+                <label><input type="radio" name="q4" value="入場と張りならいくらでもできる:20"> 入場と張りならいくらでもできる</label>
+                <label><input type="radio" name="q4" value="LINEグループに入ってスプシ埋められます:100"> LINEグループに入ってスプシ埋められます</label>
+            </div>
+            
+            <div class="question">
+                <dt class="color-main">Q5. おまいつやモブは</dt>
+                <label><input type="radio" name="q5" value="住む世界が違う雑魚:50"> 住む世界が違う雑魚</label>
+                <label><input type="radio" name="q5" value="できるだけ仲良くしてヘイトを溜めないようにしたい:10"> できるだけ仲良くしてヘイトを溜めないようにしたい</label>
+                <label><input type="radio" name="q5" value="ラストはおまいつやモブからぜひ使ってくださいと最前を渡されるような管理でありたい:0"> ラストはおまいつやモブからぜひ使ってくださいと最前を渡されるような管理でありたい</label>
+                <label><input type="radio" name="q5" value="管理からチケットを買ってくれるよう教育している:0"> 管理からチケットを買ってくれるよう教育している</label>
+            </div>
+            
+            <div class="question">
+                <dt class="color-main">Q6. 一緒に最前でやってる仲間とは</dt>
+                <label><input type="radio" name="q6" value="一緒に最前で観たいのでポシュも不可避:30"> 一緒に最前で観たいのでポシュも不可避</label>
+                <label><input type="radio" name="q6" value="仲が良いので一緒やってる:50"> 仲が良いので一緒やってる</label>
+                <label><input type="radio" name="q6" value="利害が一致しているから一緒にやってるだけ:0"> 利害が一致しているから一緒にやってるだけ</label>
+                <label><input type="radio" name="q6" value="仲間いらないので基本一人です:10"> 仲間いらないので基本一人です</label>
+            </div>
+            
+            <div class="question">
+                <dt class="color-main">Q7. 推しメンとは</dt>
+                <label><input type="radio" name="q7" value="繋がってます:0"> 繋がってます</label>
+                <label><input type="radio" name="q7" value="かなりしょぱいです:0"> かなりしょぱいです</label>
+                <label><input type="radio" name="q7" value="美味しいです:0"> 美味しいです</label>
+                <label><input type="radio" name="q7" value="険しい関係です:0"> 険しい関係です</label>
+            </div>
+            
+            <div id="alert" class="alert">すべての設問に回答してください</div>
+            <button type="button" onclick="submitAssessment()">査定する</button>
+        </form>
+    </div>
+
+    <script src="assessment.js"></script>
+</body>
+</html>
